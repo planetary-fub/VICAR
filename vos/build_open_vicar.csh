@@ -32,6 +32,7 @@ util/fetch_tae53.csh |& tee fetch_tae53.log
 
 cd $V2TOP
 util/process_project_file.csh vicset1.source PROJ_OS >vicset1.csh
+echo "setenv HWLIB $V2TOP/hw" >> vicset1.csh
 source $V2TOP/vicset1.csh
 source $V2TOP/vicset2.csh
 
@@ -76,6 +77,12 @@ echo "*** BUILDING VICAR PART 2"
 echo "**********************************************************"
 
 make -f Makefile.$VICCPU opens2 |& tee build_opens2_$VICCPU.log
+
+echo "**********************************************************"
+echo "*** BUILDING HW VICAR SOFTWARE"
+echo "**********************************************************"
+
+make -f Makefile.$VICCPU hw |& tee build_hw_$VICCPU.log
 
 echo "Done with VICAR build!  Check log for errors."
 
