@@ -1,0 +1,19 @@
+#
+# Imakefile for HW Subroutines and Applications
+#
+
+all: make_sub make_prog
+#make_inc not used for hw
+#all: make_inc make_sub make_prog
+
+# not used for hw 
+#make_inc:
+##	($(CD) inc; $(V2UTIL)/unpack_inc.csh)
+
+make_sub:
+	($(CD) sub; $(V2UTIL)/bldcomfiles.csh $(HWLIB)) 
+
+make_prog: 
+	-($(CD) prog; $(V2UTIL)/bldcomfiles.csh $(HWLIB)) 
+	-(cd $(HWLIB); $(V2UTIL)/make_pdf_cache.perl)
+
