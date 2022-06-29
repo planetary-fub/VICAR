@@ -9,17 +9,17 @@ To compile for linux (as stated in the manual, see link below):
 cd <destination>
 git clone https://github.com/swalterfub/VICAR.git
 mv VICAR vicar #the software does not accept mixed caps
+wget http://www-mipl.jpl.nasa.gov/vicar_os/v4.0/vicar_open_ext_x86-64-linx_4.0.tar.gz
 tar -zxf vicar_open_ext_x86-64-linx_4.0.tar.gz
-git clone https://github.com/swalterfub/VICAR.git
-mv VICAR vicar #the software does not accept mixed caps
 mv vicar_open_ext_x86-64-linx_4.0 vicar/external
+rm vicar_open_ext_x86-64-linx_4.0.tar.gz
 cd vicar/vos
 setenv V2TOP `pwd`
 source build_open_vicar.csh >& build_open_vicar.log &
 tail -f build_open_vicar.log
 ~~~
 
-The rest of the README contains the original content from the main repository!
+The rest of this README contains the original content from the main repository!
 
 # VICAR
 VICAR, which stands for Video Image Communication And Retrieval, is a general purpose image processing software system that has been developed since 1966 to digitally process multi-dimensional imaging data.
