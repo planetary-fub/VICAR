@@ -155,6 +155,10 @@ make_vrdi:
 	($(CD) $(V2TOP)/vrdi; $(VSYSIMAKE) -f imakefile.vrdi -s Makefile.$(VICCPU))
 	($(CD) $(V2TOP)/vrdi; $(MAKE) Makefile.$(VICCPU))
 
+make_hw:
+	($(CD) $(V2TOP)/hw; $(VSYSIMAKE) -f imakefile.hw -s Makefile.$(VICCPU))
+	($(CD) $(V2TOP)/hw; $(MAKE) Makefile.$(VICCPU))
+
 make_marssubs:
 	($(CD) $(V2UTIL)/marssubs; $(VSYSIMAKE) -f imakefile.marssubs -s Makefile.$(VICCPU))
 	($(CD) $(V2UTIL)/marssubs; $(MAKE) Makefile.$(VICCPU))
