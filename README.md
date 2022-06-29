@@ -1,3 +1,24 @@
+# Fork of official VICAR repository with HRSC tools included
+
+The Mars Express / High Resolution Stereo Camera (HRSC) software was taken from [here](ftp://psa.esac.esa.int/pub/mirror/MARS-EXPRESS/HRSC/MEX-M-HRSC-3-RDR-V2.0/SOFTWARE).
+
+Makefiles have been updated to include the HW software programs (mainly frameortho, hrortho) and library (libhwsub).
+
+To compile for linux (as stated in the manual, see link below):
+cd <destination>
+git clone https://github.com/swalterfub/VICAR.git
+mv VICAR vicar #the software does not accept mixed caps
+tar -zxf vicar_open_ext_x86-64-linx_4.0.tar.gz
+git clone https://github.com/swalterfub/VICAR.git
+mv VICAR vicar #the software does not accept mixed caps
+mv vicar_open_ext_x86-64-linx_4.0 vicar/external
+cd vicar/vos
+setenv V2TOP `pwd`
+source build_open_vicar.csh >& build_open_vicar.log &
+tail -f build_open_vicar.log
+
+The rest of the README contains the original content from the main repository!
+
 # VICAR
 VICAR, which stands for Video Image Communication And Retrieval, is a general purpose image processing software system that has been developed since 1966 to digitally process multi-dimensional imaging data.
 
