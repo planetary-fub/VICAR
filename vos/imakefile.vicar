@@ -88,6 +88,7 @@ nsyt2: make_vrdi make_motifapp make_marssubs make_crumbs make_marsprogs make_vid
 nsytall: make_dirs make_util make_stae make_shvic make_rtl make_gdalplugin make_vrdi make_motifapp
 nsytall: make_marssubs make_crumbs make_marsprogs make_vids make_done
   
+hw: make_hw
 #
  
 make_subs:

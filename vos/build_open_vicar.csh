@@ -29,10 +29,10 @@ util/prep.csh
 util/fetch_tae53.csh |& tee fetch_tae53.log
 
 # Create vicset1 file
-
 cd $V2TOP
 util/process_project_file.csh vicset1.source PROJ_OS >vicset1.csh
-echo "setenv HWLIB $V2TOP/hw" >> vicset1.csh
+echo 'setenv HWLIB $V2TOP/hw/lib/$VICCPU' >> vicset1.csh
+echo 'setenv HWINC $V2TOP/hw/inc' >> vicset1.csh
 source $V2TOP/vicset1.csh
 source $V2TOP/vicset2.csh
 
